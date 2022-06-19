@@ -4,12 +4,12 @@ This is my implementation of the Double Life gamemode. This plugin requires Spig
 
 ## Permissions
 
-- doublelife.admin: Ability to use commands
-- doublelife.player: Any player with this permission will be able to participate in the game
+- `doublelife.admin`: Ability to use commands
+- `doublelife.player`: Any player with this permission will be able to participate in the game
 
 ## Config
 
-- shuffleStartDelay: Specify the delay (in seconds) in between when the admin first executes the `/doublelifestart` command and when the server starts choosing the player's soulmate.
+- `shuffleStartDelay`: Specify the delay (in seconds) in between when the admin first executes the `/doublelifestart` command and when the server starts choosing the player's soulmate.
 
 ## Commands
 
