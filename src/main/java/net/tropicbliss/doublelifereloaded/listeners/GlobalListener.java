@@ -4,12 +4,14 @@ import net.tropicbliss.doublelifereloaded.DoubleLifeReloaded;
 import net.tropicbliss.doublelifereloaded.tasks.SyncHealth;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityRegainHealthEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.event.inventory.CraftItemEvent;
 import org.bukkit.event.player.PlayerItemConsumeEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.persistence.PersistentDataContainer;
@@ -137,5 +139,12 @@ public class GlobalListener implements Listener {
         }
         player.setDisplayName(chatColor + player.getName());
         player.setPlayerListName(chatColor + player.getName());
+    }
+
+    @EventHandler
+    public void onPlayerCraft(CraftItemEvent event) {
+        if (event.getCurrentItem().getType() == Material.ENCHANTING_TABLE) {
+            event.setCancelled(true);
+        }
     }
 }
