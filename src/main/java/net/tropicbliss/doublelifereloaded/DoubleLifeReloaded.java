@@ -16,7 +16,6 @@ public final class DoubleLifeReloaded extends JavaPlugin {
         saveDefaultConfig();
         soulmateInfo = new SelectRandomSoulmate(this);
         getCommand("doublelifestart").setExecutor(new CommandStart(this));
-        getCommand("doublelifestop").setExecutor(new CommandStop());
         getCommand("lifeset").setExecutor(new CommandLifeSet());
         getCommand("lifeset").setTabCompleter(new UserTabCompletion(List.of(1)));
         getCommand("soulbind").setExecutor(new CommandSoulbind());

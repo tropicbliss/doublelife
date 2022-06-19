@@ -8,9 +8,6 @@ commands:
   doublelifestart:
     description: Start Double Life. Player shuffling will start after a specified number of seconds.
     usage: /doublelifestart
-  doublelifestop:
-    description: Stop Double Life. Executing this command is not recommended unless all players are on the server currently. To reset the game it is recommended to use a new map instead.
-    usage: /doublelifestop
   lifeset:
     description: Set the life of a player. If this player is soulbound to another player, the other player's life will also be affected.
     usage: /lifeset <player> <life> where 0 <= life <= 3
