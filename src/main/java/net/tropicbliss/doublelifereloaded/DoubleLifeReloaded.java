@@ -4,7 +4,6 @@ import net.tropicbliss.doublelifereloaded.commands.*;
 import net.tropicbliss.doublelifereloaded.listeners.GlobalListener;
 import net.tropicbliss.doublelifereloaded.tasks.SelectRandomSoulmate;
 import org.bukkit.plugin.java.JavaPlugin;
-
 import java.util.List;
 
 public final class DoubleLifeReloaded extends JavaPlugin {
