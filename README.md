@@ -16,3 +16,4 @@ This is my implementation of the Double Life gamemode. This plugin requires Spig
 - `/doublelifestart`: Start Double Life. Player shuffling will start after a specified number of seconds.
 - `/lifeset`: Set the life of a player. If this player is soulbound to another player, the other player's life will also be affected.
 - `/soulbind`: Soulbind two players who are not yet soulbound to another player.
+- `/unbind`: Unbind the targeted player and its soulmate. Both players need to be on the server.

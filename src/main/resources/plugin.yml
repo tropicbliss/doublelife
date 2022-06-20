@@ -14,3 +14,6 @@ commands:
   soulbind:
     description: Soulbind two players who are not yet soulbound to another player.
     usage: /soulbind <player1> <player2>
+  unbind:
+    description: Unbind the targeted player and its soulmate. Both players need to be on the server.
+    usage: /unbind <player>

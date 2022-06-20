@@ -19,6 +19,8 @@ public final class DoubleLifeReloaded extends JavaPlugin {
         getCommand("lifeset").setTabCompleter(new UserTabCompletion(List.of(1)));
         getCommand("soulbind").setExecutor(new CommandSoulbind());
         getCommand("soulbind").setTabCompleter(new UserTabCompletion(List.of(1, 2)));
+        getCommand("unbind").setExecutor(new CommandUnbind());
+        getCommand("unbind").setTabCompleter(new UserTabCompletion(List.of(1)));
         getServer().getPluginManager().registerEvents(new GlobalListener(this), this);
     }
 

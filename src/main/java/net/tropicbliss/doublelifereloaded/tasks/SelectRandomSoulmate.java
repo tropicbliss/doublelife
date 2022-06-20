@@ -142,6 +142,30 @@ public class SelectRandomSoulmate extends BukkitRunnable {
         }
         container1.set(new NamespacedKey(plugin, "soulmate"), PersistentDataType.STRING, player2.getUniqueId().toString());
         container2.set(new NamespacedKey(plugin, "soulmate"), PersistentDataType.STRING, player1.getUniqueId().toString());
+        player1.setHealth(20.0);
+        player2.setHealth(20.0);
+        player1.setAbsorptionAmount(0.0);
+        player2.setAbsorptionAmount(0.0);
+        return true;
+    }
+
+    public boolean unbind(Player player) {
+        PersistentDataContainer container1 = player.getPersistentDataContainer();
+        String rawPairedUUID = container1.get(new NamespacedKey(plugin, "soulmate"), PersistentDataType.STRING);
+        if (rawPairedUUID.equals("")) {
+            return false;
+        }
+        Player player2 = Bukkit.getPlayer(UUID.fromString(rawPairedUUID));
+        if (player2 == null) {
+            return false;
+        }
+        PersistentDataContainer container2 = player2.getPersistentDataContainer();
+        container1.set(SOULMATE, PersistentDataType.STRING, "");
+        container2.set(SOULMATE, PersistentDataType.STRING, "");
+        container1.set(LIFE, PersistentDataType.INTEGER, 3);
+        container2.set(LIFE, PersistentDataType.INTEGER, 3);
+        player.sendMessage("You have been unbounded by an administrator and your life is set to 3.");
+        player2.sendMessage("You have been unbounded by an administrator and your life is set to 3.");
         return true;
     }
 
