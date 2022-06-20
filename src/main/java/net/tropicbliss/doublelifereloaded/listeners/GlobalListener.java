@@ -144,6 +144,7 @@ public class GlobalListener implements Listener {
     @EventHandler
     public void onPlayerCraft(CraftItemEvent event) {
         if (event.getCurrentItem().getType() == Material.ENCHANTING_TABLE) {
+            event.getWhoClicked().sendMessage(ChatColor.RED + "You cannot craft an enchanting table.");
             event.setCancelled(true);
         }
     }

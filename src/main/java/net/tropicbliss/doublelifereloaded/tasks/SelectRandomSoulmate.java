@@ -75,14 +75,6 @@ public class SelectRandomSoulmate extends BukkitRunnable {
         settingUp = true;
     }
 
-    public void clear() {
-        for (Player player : plugin.getServer().getOnlinePlayers()) {
-            PersistentDataContainer container = player.getPersistentDataContainer();
-            container.set(LIFE, PersistentDataType.INTEGER, 3);
-            container.set(SOULMATE, PersistentDataType.STRING, "");
-        }
-    }
-
     public boolean isSettingUp() {
         return settingUp;
     }
