@@ -55,7 +55,7 @@ public class GlobalListener implements Listener {
             double otherPlayerHealth = player.getHealth();
             double finalHealth = healAmount + otherPlayerHealth;
             if (finalHealth > 20.0) {
-                return;
+                finalHealth = 20.0;
             }
             otherPlayer.setHealth(finalHealth);
         }
