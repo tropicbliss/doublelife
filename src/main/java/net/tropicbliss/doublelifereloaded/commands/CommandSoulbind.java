@@ -39,6 +39,14 @@ public class CommandSoulbind implements CommandExecutor {
             player.sendMessage(ChatColor.RED + player2Name + " is not on the server.");
             return true;
         }
+        if (!player1.hasPermission("doublelife.player")) {
+            player.sendMessage(ChatColor.RED + player1Name + " does not have the permission to be soulbound.");
+            return true;
+        }
+        if (!player2.hasPermission("doublelife.player")) {
+            player.sendMessage(ChatColor.RED + player2Name + " does not have the permission to be soulbound.");
+            return true;
+        }
         boolean status = DoubleLifeReloaded.getSoulmateInfo().soulLink(player1, player2);
         if (!status) {
             player.sendMessage(ChatColor.RED + "One of the players is already soulbound.");
