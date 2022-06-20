@@ -115,7 +115,7 @@ public class GlobalListener implements Listener {
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent event) {
         Player player = event.getEntity();
-        if (DoubleLifeReloaded.getSoulmateInfo().getPairedPlayer(player) == null) {
+        if (!DoubleLifeReloaded.getSoulmateInfo().isPaired(player)) {
             return;
         }
         PersistentDataContainer container = player.getPersistentDataContainer();

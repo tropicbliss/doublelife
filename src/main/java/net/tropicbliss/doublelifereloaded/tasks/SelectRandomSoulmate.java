@@ -71,6 +71,12 @@ public class SelectRandomSoulmate extends BukkitRunnable {
         return Bukkit.getPlayer(pairedUUID);
     }
 
+    public boolean isPaired(Player player) {
+        PersistentDataContainer container = player.getPersistentDataContainer();
+        String rawPairedUUID = container.get(SOULMATE, PersistentDataType.STRING);
+        return !rawPairedUUID.equals("");
+    }
+
     public void setSettingUp() {
         settingUp = true;
     }
