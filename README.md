@@ -4,8 +4,8 @@ This is my implementation of the Double Life gamemode. This plugin requires Spig
 
 ## Permissions
 
-- `doublelife.admin`: Ability to use commands
-- `doublelife.player`: Any player with this permission will be able to participate in the game
+- `doublelife.admin`: Ability to use commands and break the enchanting table.
+- `doublelife.player`: Any player with this permission will be able to participate in the game.
 
 ## Config
 
