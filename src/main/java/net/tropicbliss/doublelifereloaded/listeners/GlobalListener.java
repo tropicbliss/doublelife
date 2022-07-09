@@ -150,15 +150,4 @@ public class GlobalListener implements Listener {
             event.getWhoClicked().sendMessage(ChatColor.RED + "You cannot craft an enchanting table.");
         }
     }
-
-    @EventHandler
-    public void onPlayerBreak(BlockBreakEvent event) {
-        if (event.getBlock().getType() == Material.ENCHANTING_TABLE) {
-            Player player = event.getPlayer();
-            if (!player.hasPermission("doublelife.admin")) {
-                event.setCancelled(true);
-                player.sendMessage(ChatColor.RED + "You cannot break the enchanting table.");
-            }
-        }
-    }
 }
